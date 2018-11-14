@@ -33,12 +33,13 @@
             document.getElementById("ra1").disabled=false;
             document.getElementById("ra2").disabled=false;
             document.getElementById("ra3").disabled=false;
-
+            feelValue();
         }
 
 
 
         function feelValue() {
+
             <?php
 
 
@@ -52,7 +53,9 @@
                 $answer4=$json_data[$count]['answer4'];
                 $erwtisi=$json_data[$count]['question'];
                 $count=$count+1;
-                goto form;
+               if ($count>1) {
+                   goto form;
+               }
             }
             ?>
 
