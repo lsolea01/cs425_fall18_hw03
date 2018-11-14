@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=".css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -70,7 +70,7 @@ $json = file_get_contents('loukas.json');
 
 //Decode JSON
 $json_data = json_decode($json,true);
-
+$a="b";
 //Print data
 //print_r($json_data[0]);
 
@@ -85,23 +85,27 @@ $json_data = json_decode($json,true);
         <button type="button" onclick="enableButton()">Start</button>
     </div>
     <p><?php print_r($json_data[0]['question']);?></p>
-    <form method="post">
-        <div class="radio">
-            <label><input type="radio" name="optradio" value="1"  ><?php print_r($json_data[0]['answer1']);?></label>
-        </div>
-        <div class="radio">
-            <label><input type="radio" name="optradio" value="2"><?php print_r($json_data[0]['answer2']);?></label>
-        </div>
-        <div class="radio">
-            <label><input type="radio" name="optradio" value="3"><?php print_r($json_data[0]['answer3']);?></label>
-        </div>
-        <div class="radio">
-            <label><input type="radio" name="optradio" value="4"><?php print_r($json_data[0]['answer4']);?></label>
-        </div>
-        <div>
-            <button type="button" id="button_next" onclick="<?php
-            $radioVal = $_POST["optradio"]; print_r($radioVal); ?>"disabled>Next</button>
-        </div>
+    <form  action="" method="POST">
+
+           <input type="radio" name="optradio" value="1"  ><?php print_r($json_data[0]['answer1']);?>
+             <br>
+
+
+            <input type="radio" name="optradio" value="2"><?php print_r($json_data[0]['answer2']);?>
+        <br>
+
+             <input type="radio" name="optradio" value="3"><?php print_r($json_data[0]['answer3']);?>
+        <br>
+             <input type="radio" name="optradio" value="4"><?php print_r($json_data[0]['answer4']);?>
+        <br>
+
+            <button type="button" id="button_next" value="get value"disabled>Next</button>
+        <?php
+
+
+//        $radioVal = $_POST["optradio"];
+        print_r($_POST["optradio"]);
+        ?>
 
     </form>
 
