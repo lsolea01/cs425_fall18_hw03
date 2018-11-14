@@ -14,10 +14,47 @@
 <!--    form-->
     <title>Quiz</title>
 
+    <?php
 
+    // Read JSON file
+    $json = file_get_contents('loukas.json');
+
+    //Decode JSON
+    $json_data = json_decode($json,true);
+    $a="b";
+    //Print data
+    //print_r($json_data[0]);
+    $count=0;
+    ?>
     <script>
         function enableButton() {
             document.getElementById("button_next").disabled = false;
+            document.getElementById("ra").disabled=false;
+            document.getElementById("ra1").disabled=false;
+            document.getElementById("ra2").disabled=false;
+            document.getElementById("ra3").disabled=false;
+
+        }
+
+
+
+        function feelValue() {
+            <?php
+
+
+            if ($count==5) {
+                echo "Have a good day!";
+            }
+            else{
+                $answer1=$json_data[$count]['answer1'];
+                $answer2=$json_data[$count]['answer2'];
+                $answer3=$json_data[$count]['answer3'];
+                $answer4=$json_data[$count]['answer4'];
+                $erwtisi=$json_data[$count]['question'];
+                $count=$count+1;
+                goto form;
+            }
+            ?>
 
         }
     </script>
@@ -58,54 +95,30 @@
 </div><!-- /.container-fluid -->
 
 
-<!--<div>-->
-<!---->
-<!---->
-<!---->
-<!---->
-<?php
-
-// Read JSON file
-$json = file_get_contents('loukas.json');
-
-//Decode JSON
-$json_data = json_decode($json,true);
-$a="b";
-//Print data
-//print_r($json_data[0]);
-
-?>
-<!---->
-<!---->
-<!---->
-<!--</div>-->
 
 <div class="container">
     <div>
         <button type="button" onclick="enableButton()">Start</button>
     </div>
-    <p><?php print_r($json_data[0]['question']);?></p>
-    <form  action="" method="POST">
+    <p><?php print_r($erwtisi);?></p>
 
-           <input type="radio" name="optradio" value="1"  ><?php print_r($json_data[0]['answer1']);?>
+
+    <form  id="form" method="POST">
+
+            <?php form: ?>
+           <input type="radio" id="ra" name="optradio" value="1" disabled ><?php print_r($answer1);?>
              <br>
 
 
-            <input type="radio" name="optradio" value="2"><?php print_r($json_data[0]['answer2']);?>
+            <input type="radio" id="ra1" name="optradio" value="2" disabled><?php print_r($answer2);?>
         <br>
 
-             <input type="radio" name="optradio" value="3"><?php print_r($json_data[0]['answer3']);?>
+             <input type="radio" id="ra2" name="optradio" value="3" disabled><?php print_r($answer3);?>
         <br>
-             <input type="radio" name="optradio" value="4"><?php print_r($json_data[0]['answer4']);?>
+             <input type="radio" id="ra3" name="optradio" value="4"disabled><?php print_r($answer4);?>
         <br>
 
-            <button type="button" id="button_next" value="get value"disabled>Next</button>
-        <?php
-
-
-//        $radioVal = $_POST["optradio"];
-        print_r($_POST["optradio"]);
-        ?>
+            <button type="button" id="button_next" onclick="feelValue()"  disabled>Next</button>
 
     </form>
 
