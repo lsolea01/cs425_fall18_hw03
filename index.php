@@ -22,6 +22,9 @@
     }
     if (isset($_POST['next'])){
         $_SESSION['count']=$_SESSION['count']+1;
+    }if (isset($_POST['stop_game'])){
+        $_SESSION['start']=0;
+        unset($_POST);
     }
 
     ?>
@@ -76,6 +79,11 @@
 
    <form method="post" >
        <input type="submit" name="start" value="START">
+
+        </form>
+    <form method="post" >
+       <input type="submit" name="stop_game" value="STOP GAME">
+
         </form>
 
     <?php
