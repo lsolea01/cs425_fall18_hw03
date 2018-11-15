@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,58 +11,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--    form -->
 
-<!--    form-->
     <title>Quiz</title>
 
-    <?php
+    <?php include 'script.php';
 
-    // Read JSON file
-    $json = file_get_contents('loukas.json');
+    if (isset($_POST['start'])){
+        $_SESSION['count']=0;
+        $_SESSION['start']=1;
+    }
+    if (isset($_POST['next'])){
+        $_SESSION['count']=$_SESSION['count']+1;
+    }
 
-    //Decode JSON
-    $json_data = json_decode($json,true);
-    $a="b";
-    //Print data
-    //print_r($json_data[0]);
-    $count=0;
     ?>
-    <script>
-        function enableButton() {
-            document.getElementById("button_next").disabled = false;
-            document.getElementById("ra").disabled=false;
-            document.getElementById("ra1").disabled=false;
-            document.getElementById("ra2").disabled=false;
-            document.getElementById("ra3").disabled=false;
-            feelValue();
-        }
 
 
 
-        function feelValue() {
-
-            <?php
 
 
-            if ($count==5) {
-                echo "Have a good day!";
-            }
-            else{
-                $answer1=$json_data[$count]['answer1'];
-                $answer2=$json_data[$count]['answer2'];
-                $answer3=$json_data[$count]['answer3'];
-                $answer4=$json_data[$count]['answer4'];
-                $erwtisi=$json_data[$count]['question'];
-                $count=$count+1;
-               if ($count>1) {
-                   goto form;
-               }
-            }
-            ?>
 
-        }
-    </script>
 </head>
 
 
@@ -100,34 +70,80 @@
 
 
 <div class="container">
-    <div>
-        <button type="button" onclick="enableButton()">Start</button>
-    </div>
-    <p><?php print_r($erwtisi);?></p>
 
 
-    <form  id="form" method="POST">
-
-            <?php form: ?>
-           <input type="radio" id="ra" name="optradio" value="1" disabled ><?php print_r($answer1);?>
-             <br>
 
 
-            <input type="radio" id="ra1" name="optradio" value="2" disabled><?php print_r($answer2);?>
-        <br>
+   <form method="post" >
+       <input type="submit" name="start" value="START">
+        </form>
 
-             <input type="radio" id="ra2" name="optradio" value="3" disabled><?php print_r($answer3);?>
-        <br>
-             <input type="radio" id="ra3" name="optradio" value="4"disabled><?php print_r($answer4);?>
-        <br>
+    <?php
 
-            <button type="button" id="button_next" onclick="feelValue()"  disabled>Next</button>
 
-    </form>
+    // Read JSON file
+    $json = file_get_contents('loukas.json');
+
+    //Decode JSON
+    $json_data = json_decode($json,true);
+
+    //end read json file
+
+
+
+
+
+
+
+
+    if (isset($_POST['start'])|| $_SESSION['start']==1 ) {
+        if($_SESSION['count']<4) {
+
+
+            echo '<form method="post">';
+            echo 'erwtisi??';
+            echo $_SESSION['count']+1;
+            echo'/5<br>';
+            echo '<input type="radio" name="optradio"  value="male" > Male<br>';
+            echo '<input type="radio" name="optradio" value="female"> Female<br>';
+            echo '<input type="radio" name="optradio" value="other"> Other<br>';
+            echo '<input type="radio" name="optradio" value="other">allo<br>';
+            echo '<input type="submit" name="next" value="NEXT">';
+            echo '</form>';
+        }
+        else if ($_SESSION['count']==4){
+            echo 'erwtisi??';
+            echo $_SESSION['count']+1;
+            echo'/5<br>';
+            echo '<form method="post">';
+            echo '<input type="radio" name="optradio"  value="male" > Male<br>';
+            echo '<input type="radio" name="optradio" value="female"> Female<br>';
+            echo '<input type="radio" name="optradio" value="other"> Other<br>';
+            echo '<input type="radio" name="optradio" value="other">allo<br>';
+            echo '<input type="submit" name="finish" value="FINISH">';
+            echo '</form>';
+            unset($_POST);
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    ?>
+
+
+
 
 
 </div>
 
- 
+
 
  </html>
