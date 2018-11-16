@@ -19,6 +19,17 @@
     if (isset($_POST['start'])){
         $_SESSION['count']=0;
         $_SESSION['start']=1;
+
+
+
+        // Read JSON file
+        $json = file_get_contents('loukas.json');
+
+        //Decode JSON
+        $_SESSION['json_data'] = json_decode($json,true);
+
+        //end read json file
+
     }
     if (isset($_POST['next'])){
         $_SESSION['count']=$_SESSION['count']+1;
@@ -89,13 +100,7 @@
     <?php
 
 
-    // Read JSON file
-    $json = file_get_contents('loukas.json');
 
-    //Decode JSON
-    $json_data = json_decode($json,true);
-
-    //end read json file
 
 
 
@@ -105,34 +110,45 @@
 
 
     if (isset($_POST['start'])|| $_SESSION['start']==1 ) {
+
+
+
         if($_SESSION['count']<4) {
 
-
+            echo rand(0, 24);
             echo '<form method="post">';
-            echo 'erwtisi??';
+            echo $_SESSION['json_data'][$_SESSION['count']]["question"];
             echo $_SESSION['count']+1;
             echo'/5<br>';
-            echo '<input type="radio" name="optradio"  value="male" > Male<br>';
-            echo '<input type="radio" name="optradio" value="female"> Female<br>';
-            echo '<input type="radio" name="optradio" value="other"> Other<br>';
-            echo '<input type="radio" name="optradio" value="other">allo<br>';
+            echo '<input type="radio" name="radio"  value="1" > Male<br>';
+            echo '<input type="radio" name="radio" value="2"> Female<br>';
+            echo '<input type="radio" name="radio" value="3"> Other<br>';
+            echo '<input type="radio" name="radio" value="4">allo<br>';
             echo '<input type="submit" name="next" value="NEXT">';
             echo '</form>';
         }
         else if ($_SESSION['count']==4){
-            echo 'erwtisi??';
+            echo $_SESSION['json_data'][$_SESSION['count']]["question"];
             echo $_SESSION['count']+1;
+
             echo'/5<br>';
             echo '<form method="post">';
-            echo '<input type="radio" name="optradio"  value="male" > Male<br>';
-            echo '<input type="radio" name="optradio" value="female"> Female<br>';
-            echo '<input type="radio" name="optradio" value="other"> Other<br>';
-            echo '<input type="radio" name="optradio" value="other">allo<br>';
+            echo '<input type="radio" name="optradio"  value="1" > Male<br>';
+            echo '<input type="radio" name="optradio" value="2"> Female<br>';
+            echo '<input type="radio" name="optradio" value="3"> Other<br>';
+            echo '<input type="radio" name="optradio" value="4">allo<br>';
             echo '<input type="submit" name="finish" value="FINISH">';
             echo '</form>';
             unset($_POST);
         }
 
+
+    if (isset($_POST['next'])||isset($_POST['finish'])) {
+        if(isset($_POST['radio']))
+        {
+            echo "You have selected :".$_POST['radio'];  //  Displaying Selected Value
+        }
+    }
 
     }
 
