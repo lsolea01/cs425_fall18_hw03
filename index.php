@@ -21,6 +21,7 @@
         $_SESSION['start']=1;
         $_SESSION['level']=1;
         $_SESSION['score']=0;
+        $_SESSION['boolean']=0;
 
 
 
@@ -33,7 +34,8 @@
 
 
 
-    }if (isset($_POST['stop_game'])){
+    }
+    if (isset($_POST['stop_game'])){
         $_SESSION['start']=0;
         unset($_POST);
     }
@@ -111,15 +113,41 @@
 
     if (isset($_POST['start'])|| $_SESSION['start']==1 ) {
         $random_number= rand(0, 24);
+
+
+        if (isset($_POST['next']) || $_SESSION['start']==1&&   $_SESSION['boolean']==1 ) {
+            if( $_POST['radio']==$_SESSION['question_correct']){
+                if($_SESSION['level'] == 1||$_SESSION['level'] == 2){
+                    $_SESSION['level']=$_SESSION['level']+1;
+                }
+                $_SESSION['score']=$_SESSION['score']+$_SESSION['score_value'];
+
+
+            }
+
+
+            else {
+                if ($_SESSION['level'] == 2||$_SESSION['level'] == 3) {
+                    $_SESSION['level'] = $_SESSION['level'] - 1;
+                }
+
+
+            }
+        }
+
+        $_SESSION['boolean']=1;
         // Read JSON file
-        if ($_SESSION['level']==1) {
+        if ($_SESSION['level']=="1") {
             $json = file_get_contents('level1.json');
+
         }
-        elseif ($_SESSION['level'==2]){
+        elseif ($_SESSION['level']=="2"){
             $json = file_get_contents('level2.json');
+
         }
-        elseif ($_SESSION['level'==3]){
+        elseif ($_SESSION['level']=="3"){
             $json = file_get_contents('level3.json');
+
         }
         //Decode JSON
         $json_data= json_decode($json,true);
@@ -132,45 +160,93 @@
             echo '<form method="post">';
 
             echo $json_data[$random_number]["question"];
+            echo '<br> ';
             echo $_SESSION['count']+1;
-            echo'/5<br>';
-            echo '<input type="radio" name="radio"  value="1" > Male<br>';
-            echo '<input type="radio" name="radio" value="2"> Female<br>';
-            echo '<input type="radio" name="radio" value="3"> Other<br>';
-            echo '<input type="radio" name="radio" value="4">allo<br>';
+            echo':from five question<br>';
+            echo '<input type="radio" name="radio"  value="1">';
+            echo $json_data[$random_number]["answer1"];
+            echo'<br>';
+            echo '<input type="radio" name="radio" value="2">  ';
+            echo $json_data[$random_number]["answer2"];
+            echo'<br>';
+            echo '<input type="radio" name="radio" value="3"> ';
+            echo $json_data[$random_number]["answer3"];
+            echo'<br>';
+            echo '<input type="radio" name="radio" value="4"> ';
+            echo $json_data[$random_number]["answer4"];
+            echo'<br>';
             echo '<input type="submit" name="next" value="NEXT">';
             echo '</form>';
+            echo $_SESSION['score'];
+
         }
         else if ($_SESSION['count']==4){
             echo $json_data[$random_number]["question"];
+            echo '<br>';
             echo $_SESSION['count']+1;
-
-            echo'/5<br>';
+            echo':from five question<br>';
             echo '<form method="post">';
-            echo '<input type="radio" name="radio"  value="1" > Male<br>';
-            echo '<input type="radio" name="radio" value="2"> Female<br>';
-            echo '<input type="radio" name="radio" value="3"> Other<br>';
-            echo '<input type="radio" name="radio" value="4">allo<br>';
+
+            echo '<input type="radio" name="radio"  value="1">';
+            echo $json_data[$random_number]["answer1"];
+            echo'<br>';
+            echo '<input type="radio" name="radio" value="2">  ';
+            echo $json_data[$random_number]["answer2"];
+            echo'<br>';
+            echo '<input type="radio" name="radio" value="3"> ';
+            echo $json_data[$random_number]["answer3"];
+            echo'<br>';
+            echo '<input type="radio" name="radio" value="4"> ';
+            echo $json_data[$random_number]["answer4"];
+            echo'<br>';
             echo '<input type="submit" name="finish" value="FINISH">';
             echo '</form>';
-            unset($_POST);
+            echo $_SESSION['score'];
+
+
+
         }
 
+        $_SESSION['question_correct']=$json_data[$random_number]["correct"];
+        $_SESSION['score_value']=$json_data[$random_number]["score"];
 
-    if (isset($_POST['next'])||isset($_POST['finish'])) {
-        if(isset($_POST['radio'])==$json_data[$random_number]["correct"]){
-            $_SESSION['level']=$_SESSION['level']+1;
-        $_SESSION['score']=$_SESSION['score']+$json_data[$random_number]["score"];
+
+
+    }
+
+    if(isset($_POST['finish'])){
+    if( $_POST['radio']==$_SESSION['question_correct']){
+        $_SESSION['score']=$_SESSION['score']+$_SESSION['score_value'];
+        echo '<br>';
         echo $_SESSION['score'];
-        }
+
+
+
+
     }
 
+
+
+        echo '<form method="post">';
+
+
+
+       echo' YOUR NAME TO SAVE THE SCORE:<br>';
+  echo'<input type="text" name="firstname"><br>';
+
+
+        echo'<br>';
+        echo '<input type="submit" name="save" value="SAVE">';
+        echo '</form>';
+
+
     }
 
+    if(isset($_POST['save'])){
+        $current_data=file_get_contents('score.json')
 
 
-
-
+    }
 
 
 
