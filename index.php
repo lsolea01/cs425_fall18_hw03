@@ -115,7 +115,7 @@
         $random_number= rand(0, 24);
 
 
-        if (isset($_POST['next']) || $_SESSION['start']==1&&   $_SESSION['boolean']==1 ) {
+        if (isset($_POST['next']) || $_SESSION['start']==1&&   $_SESSION['boolean']==1&& $_SESSION['count']<4 ) {
             if( $_POST['radio']==$_SESSION['question_correct']){
                 if($_SESSION['level'] == 1||$_SESSION['level'] == 2){
                     $_SESSION['level']=$_SESSION['level']+1;
@@ -203,6 +203,8 @@
             echo '</form>';
             echo $_SESSION['score'];
 
+            $_SESSION['count']=$_SESSION['count']+1;
+
 
 
         }
@@ -217,7 +219,9 @@
     if(isset($_POST['finish'])){
     if( $_POST['radio']==$_SESSION['question_correct']){
         $_SESSION['score']=$_SESSION['score']+$_SESSION['score_value'];
-        echo '<br>';
+        $_SESSION['boolean']=0;
+        $_SESSION['start']=0;
+        echo'Your Score Is:';
         echo $_SESSION['score'];
 
 
@@ -243,7 +247,19 @@
     }
 
     if(isset($_POST['save'])){
-        $current_data=file_get_contents('score.json')
+        $current_data=file_get_contents('score.json');
+        $array_data=json_decode($current_data,true);
+        $extra=array(
+                'name'=>$_POST['firstname'],
+                'score'=>$_SESSION['score'],
+        );
+        $array_data[]=$extra;
+        $final_data=json_encode($array_data);
+        if(file_put_contents('score.json',$final_data)){
+            echo '<script language="javascript">';
+            echo 'alert("Your save is complete")';
+            echo '</script>';
+        }
 
 
     }
