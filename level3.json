@@ -133,12 +133,12 @@
   "correct":"2",
   "score":"30"
 }
-,{"question":"Concatenating assignment operator is denoted by",
-  "answer1":"<strong> = </strong>",
-  "answer2":"<strong> ⋅ </strong>",
-  "answer3":"<strong> ⋅= </strong>",
-  "answer4":"<strong>⋅=⋅</strong>",
-  "correct":"3",
+,{"question":"To use proxy server, client must be configured to access proxy instead of the",
+  "answer1":"Proxy Server",
+  "answer2":"Target Server",
+  "answer3":"Domain Server",
+  "answer4":"Original Server",
+  "correct":"2",
   "score":"30"
 }
 ,{"question":"  What does trailing means in replacement of functions?",

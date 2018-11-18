@@ -1,3 +1,15 @@
+
+
+
+<!---->
+<!-- Author: Loukas Solea-->
+<!-- ID:944544-->
+
+
+
+
+
+<!--I start a session to save the value and used at the next page -->
 <?php session_start();?>
 
 <!DOCTYPE html>
@@ -7,16 +19,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
-
+<!--boostrap input-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
     <title>Quiz</title>
 
-    <?php include 'script.php';
+    <?php
+//When the start button is press this
+//    values take this price
+//
 
-    if (isset($_POST['start'])){
+
+if (isset($_POST['start'])){
         $_SESSION['count']=0;
         $_SESSION['start']=1;
         $_SESSION['level']=1;
@@ -28,13 +45,15 @@
 
 
     }
+
+//    when the next button pess the count is plus 1
     if (isset($_POST['next'])){
         $_SESSION['count']=$_SESSION['count']+1;
 
 
-
-
     }
+
+//    at the stop game unset all post and reset start value to zero
     if (isset($_POST['stop_game'])){
         $_SESSION['start']=0;
         unset($_POST);
@@ -52,7 +71,7 @@
 
 <div class="container-fluid">
 
-    <!-- Second navbar for profile settings -->
+    <!--  navbar  -->
     <nav class="navbar navbar-inverse">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,12 +88,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-collapse-4">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home Page</a></li>
-                    <li><a href="#">Help Page</a></li>
-                    <li><a href="#">High Scores Page</a></li>
+                    <li><a href="index.php">Home Page</a></li>
+                    <li><a href="helppage.php">Help Page</a></li>
+                    <li><a href="highscore.php">High Scores Page</a></li>
 
                     <li>
-                        <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#navbar-header" aria-expanded="false" aria-controls="nav-collapse4">Profile <i class=""></i> </a>
+                        <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#navbar-header" aria-expanded="false" aria-controls="nav-collapse4">TOP <i class=""></i> </a>
                     </li>
                 </ul>
 
@@ -87,9 +106,7 @@
 
 <div class="container">
 
-
-
-
+<!-- two form with 2 buttons start and stop game -->
    <form method="post" >
        <input type="submit" name="start" value="START">
 
@@ -110,11 +127,12 @@
 
 
 
-
+//check if the button start is press and generate a random number from 0 - 24
     if (isset($_POST['start'])|| $_SESSION['start']==1 ) {
         $random_number= rand(0, 24);
 
-
+//check if start or next button is press and check the question is the question is correct
+//and if plus the level and compute the score
         if (isset($_POST['next']) || $_SESSION['start']==1&&   $_SESSION['boolean']==1&& $_SESSION['count']<4 ) {
             if( $_POST['radio']==$_SESSION['question_correct']){
                 if($_SESSION['level'] == 1||$_SESSION['level'] == 2){
@@ -152,7 +170,7 @@
         //Decode JSON
         $json_data= json_decode($json,true);
 
-
+//at this point the form is a dynamic from the json file with next button
 
         if($_SESSION['count']<4) {
 
@@ -177,10 +195,10 @@
             echo'<br>';
             echo '<input type="submit" name="next" value="NEXT">';
             echo '</form>';
-            echo $_SESSION['score'];
-            echo '<xmp><br></xmp>';
+
 
         }
+//at this point the form is a dynamic from the json file with finish button
         else if ($_SESSION['count']==4){
             echo $json_data[$random_number]["question"];
             echo '<br>';
@@ -202,7 +220,6 @@
             echo'<br>';
             echo '<input type="submit" name="finish" value="FINISH">';
             echo '</form>';
-            echo $_SESSION['score'];
 
             $_SESSION['count']=$_SESSION['count']+1;
 
@@ -216,7 +233,8 @@
 
 
     }
-
+//if the finish button is press reset some values and present a form to save the score with name
+    ////of the player
     if(isset($_POST['finish'])){
     if( $_POST['radio']==$_SESSION['question_correct']){
         $_SESSION['score']=$_SESSION['score']+$_SESSION['score_value'];
@@ -246,7 +264,7 @@
 
 
     }
-
+// if save button press them with php apped to file the score and the name
     if(isset($_POST['save'])){
         $current_data=file_get_contents('score.json');
         $array_data=json_decode($current_data,true);
@@ -269,11 +287,12 @@
 
     ?>
 
-
-
-
+    <footer>
+        <p>I hope to have i nice game!!</p>
+    </footer>
 
 </div>
+
 
 
 

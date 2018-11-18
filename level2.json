@@ -23,20 +23,20 @@
   "correct":"1",
   "score":"20"
 }
-,{"question":" A HTML element that is used to group body content in a table is known to be",
-  "answer1":"<tbody>",
-  "answer2":"<tfoot>",
-  "answer3":"<thead>",
-  "answer4":"<theader>",
-  "correct":"1",
+,{"question":"  Returns a string arguments with trilling blank space removed, is a behavior of",
+  "answer1":"starts ( ) function",
+  "answer2":"chop ( ) function",
+  "answer3":"rtrim ( ) function",
+  "answer4":"Both B and C",
+  "correct":"4",
   "score":"20"
 },
-  {"question":"Tag used in HTML5 to define content aside from page content",
-    "answer1":"<legend>",
-    "answer2":"<bdo>",
-    "answer3":"<bdi>",
-    "answer4":"<aside>",
-    "correct":"4",
+  {"question":"An applet is a program written in Java on the",
+    "answer1":"Web",
+    "answer2":"Server",
+    "answer3":"Domain",
+    "answer4":"Client",
+    "correct":"2",
     "score":"20"
   }
 ,{"question":" When an attribute of HTML value contains double quotes, it is necessary to use",
@@ -47,20 +47,20 @@
   "correct":"1",
   "score":"20"
 }
-,{"question":"Element to use for making responsive webpages, is called",
-  "answer1":"<viewres>",
-  "answer2":"<meta>",
-  "answer3":"<portview>",
-  "answer4":"<viewport>",
+,{"question":"To let client know about type of document sent, a CGI program creates",
+  "answer1":"Body",
+  "answer2":"Header",
+  "answer3":"Borders",
+  "answer4":"Footer",
   "correct":"2",
   "score":"20"
 }
-,{"question":" In HTML5, a list of pre-defined options for an <input> element can be defined through",
-  "answer1":"<datalist>",
-  "answer2":"<select>",
-  "answer3":"<option>",
-  "answer4":"<output>",
-  "correct":"1",
+,{"question":"  Hyper Text Transfer Protocol (HTTP) support",
+  "answer1":"Proxy Domain",
+  "answer2":"Proxy Documents",
+  "answer3":"Proxy Server",
+  "answer4":"Proxy IP",
+  "correct":"3",
   "score":"20"
 }
 ,{"question":"Numeric array values can be sorted through an array method named as",
@@ -94,19 +94,19 @@
   "correct":"3",
   "score":"20"
 }
-,{"question":" In HTML, element defining a table heading is",
-  "answer1":"<style>",
-  "answer2":"<head>",
-  "answer3":"<thead>",
-  "answer4":"<th>",
-  "correct":"4",
+,{"question":" To create Web Pages we use a term, called",
+  "answer1":"TCP/IP",
+  "answer2":"WWW",
+  "answer3":"HTML",
+  "answer4":"FTP",
+  "correct":"3",
   "score":"20"
 }
-,{"question":"A caption for a figure can be defined in HTML5 by using tag",
-  "answer1":"<caption>",
-  "answer2":"<figurecap>",
-  "answer3":"<figcaption>",
-  "answer4":"<fcaption>",
+,{"question":"A browser can retrieve and run an HTML file that has embedded address of",
+  "answer1":"Applets",
+  "answer2":"Language",
+  "answer3":"HTML",
+  "answer4":"HTTP",
   "correct":"3",
   "score":"20"
 },{"question":"A HTML element known to be <ins>, defines",
@@ -117,12 +117,12 @@
   "correct":"2",
   "score":"20"
 },
-  {"question":"A HTML element that is used to group footer content in a table is known to be",
-    "answer1":"<tfoot>",
-    "answer2":"<tfooter>",
-    "answer3":"<tbody>",
-    "answer4":"<tgroup>",
-    "correct":"1",
+  {"question":" Nontextual information such as digitized photos or graphic images is not a physical part of an",
+    "answer1":"WebPage",
+    "answer2":"WebData",
+    "answer3":"HTML",
+    "answer4":"Web-document",
+    "correct":"3",
     "score":"20"
   }
 ,{"question":" A JS method named toString() returns",

@@ -47,12 +47,12 @@
     "correct":"4",
     "score":"10"
   }
-  ,{"question":"What have at start of HTML file",
-    "answer1":"'<xmp></xmp><html></xmp>'",
-    "answer2":"'<xmp></xmp><!DOCTYPE></xmp>'",
-    "answer3":"'<xmp></xmp><h1></xmp>'",
-    "answer4":"'<xmp></xmp><body></xmp>'",
-    "correct":"1",
+  ,{"question":"A sequence of characters that is treated as a unit is called",
+    "answer1":"Arrays",
+    "answer2":"Functions",
+    "answer3":"Methods",
+    "answer4":"Strings",
+    "correct":"4",
     "score":"10"
   }
 ,{"question":" In HTML, visited links are specified in color",
@@ -133,11 +133,11 @@
     "correct":"4",
     "score":"10"
   }
-,{"question":"In HTML, empty elements can be closed in opening tag such as",
-    "answer1":"<xmp></xmp><br /></xmp>",
-    "answer2":"<xmp></xmp></br ></xmp>",
-    "answer3":"<xmp></xmp><bl /></xmp>",
-    "answer4":"<xmp></xmp></ bl ></xmp>",
+,{"question":" Ltrim ( ) returns its string argument with",
+    "answer1":"Leading blankspace removed",
+    "answer2":"Trailing blankspace removed",
+    "answer3":"Numerical values",
+    "answer4":"None of them",
     "correct":"1",
   "score":"10"
   }
@@ -171,20 +171,20 @@
     "correct":"3",
   "score":"10"
   }
-,{"question":"All HTML documents must start with a declaration of",
-    "answer1":"<xmp></xmp><DOCTYPE html></xmp>",
-    "answer2":"<xmp></xmp><!DOCTYPE html></xmp>",
-    "answer3":"<xmp></xmp><html></xmp>",
-    "answer4":"<xmp></xmp><!html></xmp>",
+,{"question":"When two strings are exactly equivalent Strcmp ( ) returns what?",
+    "answer1":"Returns a string",
+    "answer2":"Returns 0",
+    "answer3":"Returns 1",
+    "answer4":"Returns nothing",
     "correct":"2",
   "score":"10"
   }
 ,
-  {"question":"Tag used in HTML for break line indication is",
-    "answer1":"<xmp></xmp><bl></xmp>",
-    "answer2":"<xmp></xmp><br></xmp>",
-    "answer3":"<xmp></xmp><break></xmp>",
-    "answer4":"<xmp></xmp><bline></xmp>",
+  {"question":"For finding out one string is equal to another string which function we can use?",
+    "answer1":"strpid ( )",
+    "answer2":"strpos ( )",
+    "answer3":"str ( )",
+    "answer4":"All of them",
     "correct":"2",
   "score":"10"
   }
