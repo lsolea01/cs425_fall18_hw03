@@ -1,192 +1,192 @@
 [
-  {"question":"erwtisi_json2 ena?",
-    "answer1":"1",
-    "answer2":"2",
-    "answer3":"3",
-    "answer4":"4",
-    "correct":"1",
-    "score":"10"
+  {"question":"Value set by default in the TARGET attribute is",
+    "answer1":"_blank",
+    "answer2":"_parent",
+    "answer3":"_self",
+    "answer4":"_top",
+    "correct":"3",
+    "score":"20"
   }
-,{"question":"erwtisi_json2 2?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
+,{"question":"To program behavior of web pages, language used is",
+  "answer1":"HTML",
+  "answer2":"CSS",
+  "answer3":"XML",
+  "answer4":"JavaScript",
+  "correct":"4",
+  "score":"20"
 }
-,{"question":"erwtisi_json2 3?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 4?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-},
-  {"question":"erwtisi_json2 5?",
-    "answer1":"5",
-    "answer2":"6",
-    "answer3":"7",
-    "answer4":"8",
-    "correct":"2",
-    "score":"10"
-  }
-,{"question":"erwtisi_json2 ena?",
-  "answer1":"1",
-  "answer2":"2",
-  "answer3":"3",
-  "answer4":"4",
+,{"question":"An element named content have other elements of",
+  "answer1":"2 types",
+  "answer2":"3 types",
+  "answer3":"4 types",
+  "answer4":"5 types",
   "correct":"1",
-  "score":"10"
+  "score":"20"
 }
-,{"question":"erwtisi_json2 2?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 3?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 4?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-},{"question":"erwtisi_json2 5?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 ena?",
-  "answer1":"1",
-  "answer2":"2",
-  "answer3":"3",
-  "answer4":"4",
+,{"question":" A HTML element that is used to group body content in a table is known to be",
+  "answer1":"<tbody>",
+  "answer2":"<tfoot>",
+  "answer3":"<thead>",
+  "answer4":"<theader>",
   "correct":"1",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 2?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 3?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-}
-,{"question":"erwtisi_json2 4?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-},{"question":"erwtisi_json2 5?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
+  "score":"20"
 },
-  {"question":"erwtisi_json2 ena?",
-    "answer1":"1",
-    "answer2":"2",
-    "answer3":"3",
-    "answer4":"4",
-    "correct":"1",
-    "score":"10"
+  {"question":"Tag used in HTML5 to define content aside from page content",
+    "answer1":"<legend>",
+    "answer2":"<bdo>",
+    "answer3":"<bdi>",
+    "answer4":"<aside>",
+    "correct":"4",
+    "score":"20"
   }
-,{"question":"erwtisi_json2 2?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
+,{"question":" When an attribute of HTML value contains double quotes, it is necessary to use",
+  "answer1":"Single quotes",
+  "answer2":"Double quotes",
+  "answer3":"Single+Double quotes",
+  "answer4":"No quotes",
+  "correct":"1",
+  "score":"20"
 }
-,{"question":"erwtisi_json2 3?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
+,{"question":"Element to use for making responsive webpages, is called",
+  "answer1":"<viewres>",
+  "answer2":"<meta>",
+  "answer3":"<portview>",
+  "answer4":"<viewport>",
   "correct":"2",
-  "score":"10"
+  "score":"20"
 }
-,{"question":"erwtisi_json2 4?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-},{"question":"erwtisi_json2 5?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
-},{"question":"erwtisi_json2 2?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
+,{"question":" In HTML5, a list of pre-defined options for an <input> element can be defined through",
+  "answer1":"<datalist>",
+  "answer2":"<select>",
+  "answer3":"<option>",
+  "answer4":"<output>",
+  "correct":"1",
+  "score":"20"
 }
-,{"question":"erwtisi_json2 3?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
-  "correct":"2",
-  "score":"10"
+,{"question":"Numeric array values can be sorted through an array method named as",
+  "answer1":"sort()",
+  "answer2":"length.sort()",
+  "answer3":"reverse()",
+  "answer4":"compare()",
+  "correct":"4",
+  "score":"20"
+},{"question":"Div element defines section at a",
+  "answer1":"Page level",
+  "answer2":"Inline level",
+  "answer3":"Block level",
+  "answer4":"Tab level",
+  "correct":"3",
+  "score":"20"
 }
-,{"question":"erwtisi_json2 4?",
-  "answer1":"5",
-  "answer2":"6",
-  "answer3":"7",
-  "answer4":"8",
+,{"question":" Internal CSS defines style for",
+  "answer1":"Single element",
+  "answer2":"Single HTML page",
+  "answer3":"Multiple pages",
+  "answer4":"Whole Document",
   "correct":"2",
-  "score":"10"
+  "score":"20"
+}
+,{"question":"HTML standard that does not require quotes around attribute values is said to be",
+  "answer1":"HTML 1",
+  "answer2":"HTML 3",
+  "answer3":"HTML 5",
+  "answer4":"HTML 7",
+  "correct":"3",
+  "score":"20"
+}
+,{"question":" In HTML, element defining a table heading is",
+  "answer1":"<style>",
+  "answer2":"<head>",
+  "answer3":"<thead>",
+  "answer4":"<th>",
+  "correct":"4",
+  "score":"20"
+}
+,{"question":"A caption for a figure can be defined in HTML5 by using tag",
+  "answer1":"<caption>",
+  "answer2":"<figurecap>",
+  "answer3":"<figcaption>",
+  "answer4":"<fcaption>",
+  "correct":"3",
+  "score":"20"
+},{"question":"A HTML element known to be <ins>, defines",
+  "answer1":"Incapsulation",
+  "answer2":"Insertion",
+  "answer3":"Instance",
+  "answer4":"Instantiation",
+  "correct":"2",
+  "score":"20"
+},
+  {"question":"A HTML element that is used to group footer content in a table is known to be",
+    "answer1":"<tfoot>",
+    "answer2":"<tfooter>",
+    "answer3":"<tbody>",
+    "answer4":"<tgroup>",
+    "correct":"1",
+    "score":"20"
+  }
+,{"question":" A JS method named toString() returns",
+  "answer1":"String as a number",
+  "answer2":"Alphanumeric pattern as a string",
+  "answer3":"Number as a string",
+  "answer4":"Exponential as a string",
+  "correct":"3",
+  "score":"20"
+}
+,{"question":"A sequence of characters that is treated as a unit is called",
+  "answer1":"Arrays",
+  "answer2":"Functions",
+  "answer3":"Methods",
+  "answer4":"Strings",
+  "correct":"4",
+  "score":"20"
+}
+,{"question":"When two strings are exactly equivalent Strcmp ( ) returns what?",
+  "answer1":"Returns a string",
+  "answer2":"Returns 0",
+  "answer3":"Returns 1",
+  "answer4":"Returns nothing",
+  "correct":"2",
+  "score":"20"
+},{"question":" For finding out one string is equal to another string which function we can use?",
+  "answer1":"strpid ( )",
+  "answer2":"strpos ( )",
+  "answer3":"str ( )",
+  "answer4":"All of them",
+  "correct":"2",
+  "score":"20"
+},{"question":" Returns a string arguments with trilling blank space removed, is a behavior of",
+  "answer1":"starts ( ) function",
+  "answer2":"chop ( ) function",
+  "answer3":"rtrim ( ) function",
+  "answer4":"Both B and C",
+  "correct":"4",
+  "score":"20"
+}
+,{"question":"Which function is used for replacing whole string with an alternate string?",
+  "answer1":"Strstr ( )",
+  "answer2":"Strrpos ( )",
+  "answer3":"Str_replace ( )",
+  "answer4":"Replace ( )",
+  "correct":"3",
+  "score":"20"
+}
+,{"question":"Stristr ( ) is identical to Strstr ( ) except that",
+  "answer1":"The comparison is case independent",
+  "answer2":"The comparison start from middle",
+  "answer3":"The comparison is case sensitive",
+  "answer4":"None of them",
+  "correct":"1",
+  "score":"20"
 }
 ,
-  {"question":"erwtisi_json2 5?",
-    "answer1":"5",
-    "answer2":"6",
-    "answer3":"7",
-    "answer4":"8",
-    "correct":"2",
-    "score":"10"
+  {"question":" Replacing string from left hand side is known as",
+    "answer1":"Slicing",
+    "answer2":"Dicing",
+    "answer3":"Trailing",
+    "answer4":"Leading",
+    "correct":"4",
+    "score":"20"
   }
 
 ]

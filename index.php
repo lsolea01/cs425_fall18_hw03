@@ -178,6 +178,7 @@
             echo '<input type="submit" name="next" value="NEXT">';
             echo '</form>';
             echo $_SESSION['score'];
+            echo '<xmp><br></xmp>';
 
         }
         else if ($_SESSION['count']==4){
