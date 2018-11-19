@@ -240,15 +240,15 @@ if (isset($_POST['start'])){
         $_SESSION['score']=$_SESSION['score']+$_SESSION['score_value'];
         $_SESSION['boolean']=0;
         $_SESSION['start']=0;
-        echo'Your Score Is:';
-        echo $_SESSION['score'];
+
 
 
 
 
     }
 
-
+        echo'Your Score Is:';
+        echo $_SESSION['score'];
 
         echo '<form method="post">';
 

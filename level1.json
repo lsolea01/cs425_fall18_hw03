@@ -187,6 +187,14 @@
     "answer4":"All of them",
     "correct":"2",
   "score":"10"
+  },{
+"question":"HTML is what type of language ?",
+    "answer1":"Scripting Language",
+    "answer2":"Programming Language",
+    "answer3":"Markup Language",
+    "answer4":"Network Protocol",
+    "correct":"3",
+  "score":"10"
   }
 
 ]

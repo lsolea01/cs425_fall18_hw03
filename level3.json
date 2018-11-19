@@ -187,6 +187,14 @@
     "answer4":"All of them",
     "correct":"2",
     "score":"30"
+  },
+  {"question":"HTML uses",
+    "answer1":"User defined tags",
+    "answer2":"Pre-specified tags",
+    "answer3":"Fixed tags defined by the language",
+    "answer4":"Tags only for linking",
+    "correct":"3",
+    "score":"30"
   }
 
 ]
